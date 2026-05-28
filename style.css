@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  color: #fff;
+  background: url("https://copilot.microsoft.com/th/id/BCO.e1e08273-d31f-476f-b242-2bece1be33fa.png")
+    no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  scroll-snap-align: start;
+  backdrop-filter: blur(4px) brightness(0.7);
+}
+
+/* Параллакс фон */
+body {
+  background-image: url("book.webp"); /* твое изображение */
+  background-attachment: fixed; /* фиксируем фон */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Эффект плавного появления */
+.section h2,
+.section ul {
+  animation: fadeInUp 1.5s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
