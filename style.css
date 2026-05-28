@@ -2,41 +2,93 @@ body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
   color: #fff;
-  background: url("https://copilot.microsoft.com/th/id/BCO.e1e08273-d31f-476f-b242-2bece1be33fa.png")
-    no-repeat center center fixed;
+  background: url("book.webp") no-repeat center center fixed;
   background-size: cover;
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  font-size: 1.6rem;
 }
 
-.section {
-  height: 100vh;
+li {
+  margin-bottom: 2rem;
+}
+h3 {
+  text-align: center;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+  backdrop-filter: blur(4px);
+  z-index: 10;
+}
+
+.title {
+  font-size: 2rem;
+  margin-block: 0.5rem;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 3%;
+  height: 100%;
+  width: 180px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
+  padding-top: 5rem;
+  padding-left: 1rem;
+  z-index: 9;
+  font-size: 1rem;
+}
+.nav__list {
+  list-style: none;
+  padding: 0;
+}
+.nav__item {
+  margin-bottom: 1rem;
+}
+.sidebar a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 0 1rem;
+  transition: background 0.3s;
+}
+.sidebar a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+main {
+  margin-left: 200px;
+  padding-top: 6rem;
+}
+
+.card {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  scroll-snap-align: start;
-  backdrop-filter: blur(4px) brightness(0.7);
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: 12px;
+  animation: fadeIn 1.5s ease;
 }
 
-/* Параллакс фон */
-body {
-  background-image: url("book.webp"); /* твое изображение */
-  background-attachment: fixed; /* фиксируем фон */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.center-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px; /* обмежує ширину для читабельності */
 }
 
-/* Эффект плавного появления */
-.section h2,
-.section ul {
-  animation: fadeInUp 1.5s ease;
-}
-
-@keyframes fadeInUp {
+@keyframes fadeIn {
   from {
     opacity: 0;
     transform: translateY(40px);
