@@ -55,7 +55,7 @@ h3 {
   display: block;
   color: #fff;
   text-decoration: none;
-  padding: 0 1rem;
+  padding: 0.5rem 1rem;
   transition: background 0.3s;
 }
 .sidebar a:hover {
@@ -85,7 +85,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1000px; /* обмежує ширину для читабельності */
+  max-width: 1200px; /* обмежує ширину для читабельності */
 }
 
 @keyframes fadeIn {
