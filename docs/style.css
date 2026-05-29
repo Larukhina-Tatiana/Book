@@ -42,9 +42,6 @@ h3 {
   min-height: 100vh;
 }
 
-.card__header {
-  max-width: 80%;
-}
 .header {
   position: fixed;
   top: 0;
@@ -57,8 +54,11 @@ h3 {
 }
 
 .title {
-  font-size: 2rem;
+  font-size: clamp(1.125rem, 0.906rem + 1.09vw, 2rem);
   margin-block: 0;
+}
+.card__header {
+  max-width: 80%;
 }
 
 .sidebar {
@@ -75,7 +75,8 @@ h3 {
   padding-inline: 1rem;
   z-index: 9;
   font-size: 1rem;
-  overflow-y: auto;
+  /* overflow-y: auto; */
+  overflow: visible;
 }
 .nav__list {
   list-style: none;
@@ -87,12 +88,37 @@ h3 {
 }
 
 .nav__link {
+  position: relative;
   display: block;
   border-radius: 6px;
   color: #fff;
   text-decoration: none;
   padding: 0.5rem 1rem;
   transition: background 0.3s;
+}
+
+.nav__link::after {
+  content: attr(data-tooltip);
+  position: fixed;
+  left: 100%; /* тултіп справа від лінка */
+  top: auto;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: #ffd700;
+  padding: 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
+  z-index: 999; /* поверх сайдбару */
+}
+
+.nav__link:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) translateX(10px);
 }
 .nav__link:hover {
   background: rgba(255, 255, 255, 0.2);
