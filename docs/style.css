@@ -86,15 +86,22 @@ h3 {
   margin-bottom: 0;
 }
 
-.sidebar a {
+.nav__link {
   display: block;
+  border-radius: 6px;
   color: #fff;
   text-decoration: none;
   padding: 0.5rem 1rem;
   transition: background 0.3s;
 }
-.sidebar a:hover {
+.nav__link:hover {
   background: rgba(255, 255, 255, 0.2);
+}
+
+.nav__link.active {
+  background: rgba(255, 215, 0, 0.3); /* золотистий фон */
+  color: #ffd700;
+  border-radius: 6px;
 }
 
 .main {
