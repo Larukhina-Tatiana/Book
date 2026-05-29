@@ -109,7 +109,7 @@ h3 {
   align-items: center;
   background: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
   padding: 2rem;
   border-radius: 12px;
   animation: fadeIn 1.5s ease;
