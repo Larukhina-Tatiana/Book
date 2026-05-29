@@ -126,7 +126,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px; /* обмежує ширину для читабельності */
+  max-width: 1200px;
 }
 
 .cards-spring {
@@ -157,14 +157,19 @@ h3 {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
 }
 
-.spring-card h3 {
+.card__subtitle {
   margin-bottom: 1rem;
   color: #ffd700;
 }
 
-.spring-card ul {
+.card__list {
   list-style: none;
   padding: 0;
+}
+
+.card__list--conclusion {
+  list-style: decimal;
+  padding-left: 20px;
 }
 .card__item {
   text-align: left;
@@ -176,6 +181,9 @@ h3 {
 
 .card__content {
   max-width: 90%;
+}
+.card__conclusion {
+  max-width: 800px;
 }
 
 @keyframes fadeIn {
