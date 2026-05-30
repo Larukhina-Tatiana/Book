@@ -2,9 +2,9 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll("article"); // всі секції-картки
-  console.log(sections);
+  // console.log(sections);
   const navLinks = document.querySelectorAll(".nav__link"); // всі лінки меню
-  console.log(navLinks);
+  // console.log(navLinks);
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
